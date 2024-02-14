@@ -1,6 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --cor-fundo: #040D12;
+    --cor-bordas: #183D3D;
+    --cor-clara: #93B1A6;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Figtree', sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+.decoder-container,
+.decoder-container__text-area,
+.decoder-container__output-text,
+.text-area__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decoder-container {
+    height: 92vh;
+    justify-content: space-between;
+    padding: 4.8% 15%;
+}
+
+.decoder-container__text-area,
+.decoder-container__output-text {
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+}
+
+.decoder-container__text-area {
+    width: 60%;
+}
+
+.decoder-container__output-text {
+    background-color: var(--cor-clara);
+    border-radius: 10px;
+    border: 2px solid var(--cor-bordas);
+    padding: 10px;
+    width: 30%;
+}
+
+.text-area__buttons {
+    gap: 10px;
+}
+
+.text-area__buttons button,
+.decoder-container__output-text button {
+    background-color: transparent;
+    border: 2px solid var(--cor-bordas);
+    padding: 15px 60px;
+    border-radius: 10px;
+    color: var(--cor-clara);
+    font-size: 1rem;
+}
+
+.decoder-container__output-text button {
+    color: var(--cor-fundo);
+    display: none;
+}
+
+.text-area__input {
+    height: 90%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #b6dacd;
+    outline: 2px solid var(--cor-bordas);
+    border-radius: 10px;
+    font-size: 2rem;
+    resize: none;
+    padding: 8px;
+}
+
+.text-area__input:focus-visible {
+    outline: 2px solid var(--cor-clara);
+}
+
+.output-text__title,
+.output-text__description {
+    text-align: center;
+}
+
+.description-footer {
+    padding: 23px;
+    border-top: 2px solid var(--cor-bordas);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.description-footer p {
+    color: var(--cor-clara);
 }
