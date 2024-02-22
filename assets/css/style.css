@@ -81,6 +81,7 @@ body {
     border-radius: 10px;
     font-size: 2rem;
     resize: none;
+    text-transform: lowercase;
     padding: 8px;
 }
 
@@ -103,4 +104,8 @@ body {
 
 .description-footer p {
     color: var(--cor-clara);
+}
+
+.output-text__search-img {
+    display: none;
 }
