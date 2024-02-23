@@ -29,3 +29,30 @@ const criptText = () => {
     }
     textOutputElement.innerHTML = finalText;
 }
+
+const decriptText = () => {
+    const criptText = textInputElement.value;
+    let finalText = criptText;
+
+    if (criptText.includes('ai')) {
+        finalText = finalText.replaceAll('ai', 'a');
+    }
+
+    if (criptText.includes('enter')) {
+        finalText = finalText.replaceAll('enter', 'e');
+    }
+
+    if (criptText.includes('imes')) {
+        finalText = finalText.replaceAll('imes', 'i');
+    }
+
+    if (criptText.includes('ober')) {
+        finalText = finalText.replaceAll('ober', 'o');
+    }
+
+    if (criptText.includes('ufat')) {
+        finalText = finalText.replaceAll('ufat', 'u');
+    }
+
+    textOutputElement.innerHTML = finalText;
+}
