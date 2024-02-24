@@ -84,3 +84,19 @@ const copyText = () => {
         buttonCopy.innerHTML = 'Copiar';
     }, 2000);
 }
+
+textInputElement.addEventListener('keypress', (c) => {
+    if (!checkChar(c)) {
+        c.preventDefault();
+    }
+})
+
+const checkChar = (c) => {
+    const char = String.fromCharCode(c.keyCode);
+
+    const pattern = '[a-zA-Z!?]';
+
+    if (RegExp(pattern).exec(char)) {
+        return true;
+    }
+}
