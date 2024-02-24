@@ -1,6 +1,6 @@
 # 📝 Decodificador de Texto
 
-- Projeto que faz a codificação e decodificação de um texto, seguindo uma determinada regra.
+- Projeto que faz a codificação e decodificação de um texto, seguindo uma determinada regra. Desenvolvido durante o #challengeonedecodificador5.
 
 ##
 
