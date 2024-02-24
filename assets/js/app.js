@@ -64,6 +64,7 @@ const defineOutputItemsVisibility = () => {
     const containerTextOutputElement = document.querySelector('.output-text__content');
     const imageWithoutText = document.querySelector('.output-text__search-img');
     const buttonCopy = document.querySelector('.button-copy');
+    const outputTextParagraph = document.querySelector('.output-text__description');
 
     titleOutputElement.setAttribute('hidden', 'hidden');
     imageWithoutText.setAttribute('hidden', 'hidden');
@@ -72,6 +73,7 @@ const defineOutputItemsVisibility = () => {
     containerTextOutputElement.style.justifyContent = 'start';
     containerTextOutputElement.style.alignItems = 'start';
     containerTextOutputElement.style.fontSize = '2rem';
+    outputTextParagraph.style.textAlign = 'start';
 }   
 
 const copyText = () => {
