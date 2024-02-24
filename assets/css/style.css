@@ -112,6 +112,34 @@ body {
     color: var(--cor-clara);
 }
 
+.output-text__search-img {
+    width: 100%;
+    object-fit: cover;
+}
+
 button {
     cursor: pointer;
+}
+
+@media screen and (max-width: 1260px) {
+    .decoder-container, .text-area__buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .decoder-container__output-text, .decoder-container__text-area {
+        width: 100%;
+    }
+
+    .decoder-container__text-area {
+        gap: 1rem;
+    }
+
+    .decoder-container__text-area button {
+        padding: 10px 50px;
+    }
+
+    .output-text__search-img {
+        width: auto;
+    }
 }
