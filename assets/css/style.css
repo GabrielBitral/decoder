@@ -21,7 +21,8 @@ body {
 .decoder-container,
 .decoder-container__text-area,
 .decoder-container__output-text,
-.text-area__buttons {
+.text-area__buttons,
+.output-text__content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,10 +35,12 @@ body {
 }
 
 .decoder-container__text-area,
-.decoder-container__output-text {
+.decoder-container__output-text,
+.output-text__content {
     flex-direction: column;
     height: 100%;
     gap: 2rem;
+    width: 100%;
 }
 
 .decoder-container__text-area {
@@ -56,17 +59,20 @@ body {
     gap: 10px;
 }
 
+.text-area__buttons button {
+    color: var(--cor-clara);
+}
+
 .text-area__buttons button,
-.decoder-container__output-text button {
+.decoder-container__output-text .output-text__button button {
     background-color: transparent;
     border: 2px solid var(--cor-bordas);
     padding: 15px 60px;
     border-radius: 10px;
-    color: var(--cor-clara);
     font-size: 1rem;
 }
 
-.decoder-container__output-text button {
+.button-copy {
     color: var(--cor-fundo);
     display: none;
 }
@@ -106,6 +112,6 @@ body {
     color: var(--cor-clara);
 }
 
-.output-text__search-img {
-    display: none;
+button {
+    cursor: pointer;
 }

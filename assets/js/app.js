@@ -27,6 +27,7 @@ const criptText = () => {
                 break;
         }
     }
+    defineOutputItemsVisibility();
     textOutputElement.innerHTML = finalText;
 }
 
@@ -54,5 +55,30 @@ const decriptText = () => {
         finalText = finalText.replaceAll('ufat', 'u');
     }
 
+    defineOutputItemsVisibility();
     textOutputElement.innerHTML = finalText;
+}
+
+const defineOutputItemsVisibility = () => {
+    const titleOutputElement = document.querySelector('.output-text__title');
+    const containerTextOutputElement = document.querySelector('.output-text__content');
+    const imageWithoutText = document.querySelector('.output-text__search-img');
+    const buttonCopy = document.querySelector('.button-copy');
+
+    titleOutputElement.setAttribute('hidden', 'hidden');
+    imageWithoutText.setAttribute('hidden', 'hidden');
+
+    buttonCopy.style.display = 'block';
+    containerTextOutputElement.style.justifyContent = 'start';
+    containerTextOutputElement.style.alignItems = 'start';
+    containerTextOutputElement.style.fontSize = '2rem';
+}   
+
+const copyText = () => {
+    navigator.clipboard.writeText(textOutputElement.innerHTML);
+    const buttonCopy = document.querySelector('.button-copy');
+    buttonCopy.innerHTML = 'Texto Copiado!';
+    setTimeout(() => {
+        buttonCopy.innerHTML = 'Copiar';
+    }, 2000);
 }

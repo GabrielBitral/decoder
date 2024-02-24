@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <main class="decoder-container">
         <div class="decoder-container__text-area">
-            <textarea class="text-area__input" id="text-area__input" placeholder="Digite seu texto aqui (Apenas letras minúsculas e sem acento)"></textarea>
+            <textarea class="text-area__input" id="text-area__input"
+                placeholder="Digite seu texto aqui (Apenas letras minúsculas e sem acento)"></textarea>
             <div class="text-area__buttons">
                 <button onclick="criptText()">
                     Criptografar
@@ -20,10 +23,16 @@
             </div>
         </div>
         <div class="decoder-container__output-text">
-            <img src="assets/img/High quality products 1 1.svg" alt="Pessoa procurando a mensagem" class="output-text__search-img">
-            <h2 class="output-text__title">Nenhuma mensagem encontrada!</h2>
-            <p class="output-text__description" id="text-output">Digite um texto que você deseja criptografar ou descriptografar.</p>
-            <button>Copiar</button>
+            <div class="output-text__content">
+                <img src="assets/img/High quality products 1 1.svg" alt="Pessoa procurando a mensagem"
+                    class="output-text__search-img">
+                <h2 class="output-text__title">Nenhuma mensagem encontrada!</h2>
+                <p class="output-text__description" id="text-output">Digite um texto que você deseja criptografar ou
+                    descriptografar.</p>
+            </div>
+            <div class="output-text__button">
+                <button class="button-copy" onclick="copyText()">Copiar</button>
+            </div>
         </div>
     </main>
     <footer class="description-footer">
@@ -31,4 +40,5 @@
     </footer>
     <script src="assets/js/app.js" defer></script>
 </body>
+
 </html>
